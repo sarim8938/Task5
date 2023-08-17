@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxmodel</title>
+    <style>
+        .container {
+            width: 600px;
+            padding: 20px;
+            margin: auto;
+            border: 2px solid red;
+            overflow: hidden; /* Clear float*/
+            background-color: fuchsia;
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+            margin: 10px;
+            padding: 10px;
+        }
+        .content1 {
+            clear: both; /* Clear float */
+            border: 2px solid black;
+            background-color: blue;
+        }
+        .content2,
+        .content3,
+        .content4 {
+            float: left;
+            width: calc(33.33% - 20px); /* Adjust for margins */
+            box-sizing: border-box; /* Include padding in width */
+            border: 2px solid black;
+            background: #ccc;
+        }
+        .content3 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: blueviolet;
+        }
+        .content4 {
+            float: right;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus veniam perspiciatis soluta exercitationem quisquam maxime commodi iste accusamus quo?</div>
+        <div class="content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus veniam perspiciatis soluta exercitationem quisquam maxime commodi iste accusamus quo?</div>
+        <div class="content3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus veniam perspiciatis soluta exercitationem quisquam maxime commodi iste accusamus quo?</div>
+        <div class="content4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus veniam perspiciatis soluta exercitationem quisquam maxime commodi iste accusamus quo?</div>
+    </div>
+</body>
+</html>
